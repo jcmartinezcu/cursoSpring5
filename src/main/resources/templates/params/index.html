@@ -11,6 +11,12 @@
 				Juan Carlos</a></li>
 		<li><a th:href="@{/params/string(texto='Que tal John!')}">/params/string?texto=Que
 				tal John!</a></li>
+		<li><a
+			th:href="@{/params/mix-params(saludo='Como estas Juan Carlos!', numero=7)}">/params/mix-params?saludo=Como
+				estas Juan Carlos!&numero=7</a></li>
+		<li><a
+			th:href="@{/params/mix-params-request(saludo='Como estas Juan Carlos!', numero=7)}">/params/mix-params-request?saludo=Como
+				estas Juan Carlos!&numero=7</a></li>
 
 	</ul>
 </body>
