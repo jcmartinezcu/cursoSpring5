@@ -1,6 +1,7 @@
 package com.bolsadeideas.springboot.web.app.controllers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -38,7 +39,12 @@ public class IndexController {
 	@RequestMapping("/listar")
 	public String listar(Model model) {
 		
-		List<Usuario> usuarios = new ArrayList<>();
+		List<Usuario> usuarios = Arrays.asList(new Usuario("Andres", "Guzman", "andres@correo.es"),
+				new Usuario("Juan","Martinez", "juan@correo.com"),
+				new Usuario("Carlos", "Cutillas", "carlos@hotmail.com"),
+				new Usuario("Tornado", "Roe", "roe@hotmail.com"));
+		
+
 		
 		model.addAttribute("titulo", "listado de usuarios");
 		model.addAttribute("usuarios", usuarios);
